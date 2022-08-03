@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css">
+        <title>Mazzo di carte</title>
+    </head>
+
+    <body>
+        <div id="welcome" class="welcome">
+            <h1>🤘 WEYYYY 🤘</h1>
+            <div class="welcome-buttons">
+                <button id="game-normal">I want to play!</button>
+                <button id="game-relax">Siesta relax</button>
+            </div>
+        </div>
+        <header class="headboard">
+            <div class="counter">
+                <div class="counter-item">
+                    <h4 class="headboard-title">Movements</h4>
+                    <div class="headboard-num">
+                        <span id="mov">00</span>/<span id="mov-total">20</span>
+                    </div>
+                </div>
+
+                <div id="cronometro" class="counter-item">
+                    <h4 class="headboard-title">Time</h4>
+                    <div class="headboard-num">
+                        <span id="minutes">00</span>:<span id="seconds">00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="level">
+                <h4 class="headboard-title">Level</h4>
+                <div class="headboard-num"><span id="level">01</span></div>
+            </div>
+            <button id="level-control" class="level-control">…</button>
+        </header>
+        <main>
+            <div id="table" class="table"></div>
+
+            <div id="subLevel" class="sub-level">
+                <div class="modal">
+                    <h2>Good work!</h2>
+                    <button id="upload">Next level!</button>
+                    <button class="restart">Restart</button>
+                </div>
+            </div>
+            <div id="gameOver" class="game-over">
+                <div class="modal">
+                    <h2>Oh no!</h2>
+                    <p>You've run out of moves 😭</p>
+                    <button class="restart">Restart</button>
+                </div>
+            </div>
+            <div id="timeOver" class="game-over">
+                <div class="modal">
+                    <h2>Oh no!</h2>
+                    <p>You've run out of time!!😭</p>
+                    <button class="restart">Restart</button>
+                </div>
+            </div>
+            <div id="endGame" class="end-game">
+                <div class="modal">
+                    <h2>Congratulations!</h2>
+                    <p>You have passed all the levels! :D</p>
+                    <button class="restart">Restart</button>
+                </div>
+            </div>
+        </main>
+        <div class="select-level">
+            <button id="close-levels" class="close-levels">&times;</button>
+            <ul></ul>
+        </div>
+
+        <audio src="sounds/acierto.mp3" class="sound" id="sound-acierto" preload="auto"></audio>
+        <audio src="sounds/error.mp3" class="sound" id="sound-error" preload="auto"></audio>
+        <audio src="sounds/carta.mp3" class="sound" id="sound-carta" preload="auto"></audio>
+
+        <script src="js/global-variables.js"></script>
+        <script src="js/discovery-compare.js"></script>
+        <script src="js/deck-you-deal.js"></script>
+        <script src="js/success-error.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/cronometro.js"></script>
+        <script src="js/finalize.js"></script>
+        <script src="js/change-level.js"></script>
+        <script src="js/game-over.js"></script>
+        <script src="js/menu-levels.js"></script>
+        <script src="js/start.js"></script>
+        <script src="js/start-level.js"></script>
+    </body>
+
+</html>
